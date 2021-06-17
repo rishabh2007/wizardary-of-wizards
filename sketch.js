@@ -7,7 +7,7 @@ var distance = 0;
 
 var form, player, game;
 
-//var cars, car1, car2, car3, car4;
+var rect1, rect2, rect3, rect4, rect5;
 
 var track, car1_img, car2_img, car3_img, car4_img;
 
@@ -21,7 +21,8 @@ function preload(){
 }
 
 function setup(){
-  canvas = createCanvas(displayWidth - 20, displayHeight-30);
+  //canvas = createCanvas(displayWidth - 20, displayHeight-30);
+  canvas = createCanvas(600,600);
   database = firebase.database();
   game = new Game();
   gameState = 0;
@@ -30,7 +31,7 @@ function setup(){
 
 
 function draw(){
-  background(141,144,164)
+ 
   if(playerCount === 1){
     game.update(1);
   }
